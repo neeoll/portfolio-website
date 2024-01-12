@@ -17,6 +17,7 @@ function App() {
             <pre>
               <TypewriterEffect.default onInit={(typewriter) => {
                 typewriter.changeDelay(35)
+                .pauseFor(250)
                 .typeString("Hello World!")
                 .pauseFor(Math.random() * (750 - 500) + 500)
                 .typeString("\n\nMy name is Noel Arias, I'm a self taught software engineer from North Carolina with a few years of experience working across multiple software development disciplines.")
