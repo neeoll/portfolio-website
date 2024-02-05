@@ -2,13 +2,14 @@ import './App.css';
 
 import { SiLinkedin, SiGithub, SiGmail } from "react-icons/si"
 import TypewriterComponent from 'typewriter-effect';
-import { DotGrid } from './Components/DotGrid';
+import Canvas from './Components/Canvas';
 
 function App() {
   return (
     <div className="App">
+      <script src='./Components/temp.js' />
       <div className="container" id="container">
-        <DotGrid />
+        <Canvas />
         <div className="body">
           <ul className="contact-links">
             <li className='contact-link'><a href="http://linkedin.com/in/noel-arias" target="_blank" rel="noreferrer"><SiLinkedin className='anchor-icon'/></a></li>
