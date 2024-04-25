@@ -1,0 +1,30 @@
+{
+  "links": [
+    {
+      "href": "http://linkedin.com/in/noel-arias",
+      "jsx": "<SiLinkedin className='anchor-icon'/>"
+    }, 
+    {
+      "href": "http://github.com/neeoll",
+      "jsx": "<SiGithub className='anchor-icon'/>"
+    },
+    {
+      "href": "mailto: arias.noel24@gmail.com",
+      "jsx": "<SiGmail className='anchor-icon'/>"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Guardian",
+      "href": "https://guardianbot.space/"
+    },
+    {
+      "name": "Chat App",
+      "href": "https://social-media-roan.vercel.app/"
+    },
+    {
+      "name": "Tudu",
+      "href": "https://web3-todo-list-6f1zsfbty-ariasnoel.vercel.app/"
+    }
+  ]
+}

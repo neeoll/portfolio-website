@@ -1,8 +1,4 @@
-.App {
-  text-align: center;
-}
-
-#canvas {
+.canvas {
   position: absolute;
 }
 
@@ -43,19 +39,6 @@
   padding: 5px;
   padding-left: 50px;
   padding-right: 50px;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.border-class {
-  border-width: 10px;
-  border-top-style: solid;
-  border-left-style: double;
-  border-bottom-style: solid;
-  border-right-style: double;
-  border-radius: 5px;
 }
 
 .contact-links {
@@ -132,12 +115,6 @@ pre {
   margin: 0;
   margin-left: 10px;
   user-select: none;
-}
-
-.name {
-  font-size: 1em;
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
 
 .projects-header {

@@ -1,10 +1,13 @@
-import './App.css';
+import './App.css'
 
 import { SiLinkedin, SiGithub, SiGmail } from "react-icons/si"
-import TypewriterComponent from 'typewriter-effect';
-import Canvas from './Components/Canvas';
+import TypewriterComponent from 'typewriter-effect'
+import Canvas from './Components/Canvas'
+import data from './data.json'
+import JsxParser from 'react-jsx-parser'
 
 function App() {
+
   return (
     <div className="App">
       <script src='./Components/temp.js' />
@@ -12,9 +15,13 @@ function App() {
         <Canvas />
         <div className="body">
           <ul className="contact-links">
-            <li className='contact-link'><a href="http://linkedin.com/in/noel-arias" target="_blank" rel="noreferrer"><SiLinkedin className='anchor-icon'/></a></li>
-            <li className='contact-link'><a href="http://github.com/neeoll" target="_blank" rel="noreferrer"><SiGithub className='anchor-icon'/></a></li>
-            <li className='contact-link'><a href="mailto: arias.noel24@gmail.com" target="_blank" rel="noreferrer"><SiGmail className='anchor-icon'/></a></li>
+            {data.links.map((link) => 
+              <li className='contact-link'>
+                <a href={link.href} target="_blank" rel="noreferrer">
+                  <JsxParser components={{SiLinkedin, SiGithub, SiGmail}} jsx={link.jsx} />
+                </a>
+              </li>
+            )}
           </ul>
           <div className="main-content">
             <div className='text-block'>
@@ -24,7 +31,7 @@ function App() {
                   .pauseFor(250)
                   .typeString("Hello World!")
                   .pauseFor(Math.random() * (750 - 500) + 500)
-                  .typeString("\n\nMy name is Noel Arias, I'm a self taught software engineer from North Carolina with a few years of experience working across multiple software development disciplines.")
+                  .typeString("\n\nMy name is Noel Arias, I'm a self taught software developer with a few years of experience working across multiple software development disciplines.")
                   .pauseFor(Math.random() * (750 - 500) + 500)
                   .typeString("\nI've built a number of personal projects and contribute to open source software on my spare time.")
                   .pauseFor(Math.random() * (750 - 500) + 500)
@@ -40,16 +47,16 @@ function App() {
             <div className='projects'>
               <pre className="projects-header">Projects</pre>
               <ul className='project-links'>
-                <li className='project-link'><pre><a href="https://guardianbot.space/" target="_blank" rel="noreferrer">Guardian</a></pre></li>
-                <li className='project-link'><pre><a href="https://social-media-roan.vercel.app/" target="_blank" rel="noreferrer">Chat App</a></pre></li>
-                <li className='project-link'><pre><a href="https://web3-todo-list-6f1zsfbty-ariasnoel.vercel.app/" target="_blank" rel="noreferrer">Tudu</a></pre></li>
+                {data.projects.map((project) => 
+                  <li className='project-link'><pre><a href={project.href} target="_blank" rel="noreferrer">{project.name}</a></pre></li>
+                )}
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
