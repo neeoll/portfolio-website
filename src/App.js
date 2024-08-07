@@ -10,7 +10,6 @@ function App() {
 
   return (
     <div className="App">
-      <script src='./Components/temp.js' />
       <div className="container" id="container">
         <Canvas />
         <div className="body">
